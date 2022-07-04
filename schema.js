@@ -8,6 +8,10 @@ type Query {
     categories: [Category!]!
     category(id:ID!): Category
 }
+type Mutation {
+    addCategory(input:AddCategoryInput!): Category!
+    addProduct(input: AddProductInput!): Product!
+}
 type Product {
     id:ID!
     name:String!
@@ -34,5 +38,8 @@ type Review {
 input ProductsFilterInput {
     onSale: Boolean
     averageRating: Int
+}
+input AddCategoryInput {
+    name: String!
 }
 `

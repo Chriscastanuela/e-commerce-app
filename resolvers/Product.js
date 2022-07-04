@@ -1,5 +1,3 @@
-const { categories } = require('../db');
-
 exports.Product = {
-    category: (parent, args, context) => categories.find(theCategory => theCategory.id === parent.categoryId)
+    category: ({ categoryId }, args, { categories }) => categories.find(theCategory => theCategory.id === categoryId)
 };

@@ -33,5 +33,6 @@ type Review {
 }
 input ProductsFilterInput {
     onSale: Boolean
+    averageRating: Int
 }
 `

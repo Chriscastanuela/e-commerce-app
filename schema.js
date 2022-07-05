@@ -13,6 +13,7 @@ type Mutation {
     addProduct(input: AddProductInput!): Product!
     addReview(input: AddReviewInput!): Review!
     deleteCategory(id:ID!): Boolean!
+    deleteProduct(id:ID!): Boolean!
 }
 type Product {
     id:ID!

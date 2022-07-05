@@ -1,6 +1,8 @@
 exports.Query = {
     hello: (parent, args, context) => 'world',
     products: (parent, { filter }, { db }) => {
+        
+        // console.log(db.reviews);
 
         let theProducts = db.products;
 

@@ -63,5 +63,11 @@ exports.Mutation = {
             else return prod
         })
         return true;
+    },
+    deleteProduct: (parent, { id }, { db }) => {
+        const theProduct = db.products.find(prod => prod.id === id);
+        db.products = db.products.filter(prod => prod.id !== theProduct.id);
+        db.reviews = db.reviews.filter(review => review.productId !== theProduct.id);
+        return true;
     }
 }

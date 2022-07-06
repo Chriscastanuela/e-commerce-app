@@ -1,14 +1,13 @@
-const { ApolloServer } = require('apollo-server');
+const { ApolloServer } = require('apollo-server'); 
 
-const { typeDefs } = require('./schema');
+const { typeDefs } = require('./schema'); 
 
-const { Query } = require('./resolvers/Query');
+const { Query } = require('./resolvers/Query'); 
 const { Product } = require('./resolvers/Product');
 const { Category } = require('./resolvers/Category');
 const { Mutation } = require('./resolvers/Mutation');
 
-const { db } = require('./db');
-
+const { db } = require('./db'); 
 
 const server = new ApolloServer({
     typeDefs,
@@ -23,4 +22,4 @@ const server = new ApolloServer({
     }
 });
 
-server.listen().then(({url}) => console.log(`server is ready @ ${url}`));
+server.listen().then(({url}) => console.log(`server is ready @ ${url}`)); 
